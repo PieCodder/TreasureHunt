@@ -1,0 +1,56 @@
+import random
+
+print("Welcome to a treasure hunt game!")
+
+print("The treasure could be in any of these rooms")
+
+print("Kitchen")
+
+print("LivingRoom")
+
+print("Bedroom")
+
+Kitchen = False
+
+LivingRoom = False
+
+Bedroom = False
+
+Player = ""
+
+rooms = ["Kitchen", "LivingRoom", "Bedroom"]
+
+K_clues = ["Where pots and pans meet the heat, your next clue you'll surely meet.", "In a place where meals are made with love, your treasure awaits from above.", "Look where food finds its start, there lies the next piece to your heart."]
+
+L_clues = [ "1. Amidst the heart of your humble abode, seek where comfort and laughter are stowed.",
+    "2. Where couches gather and tables gleam, your next clue lies within this dream.",
+    "3. Amongst the space where family gathers tight, your treasure waits in plain sight."]
+
+B_clues = ["In a place where dreams take flight, your treasure hides within the night.",
+    "Where pillows soft and blankets warm, seek your next clue amidst the calm.",
+    "Amongst the space where you lay your head, your treasure waits beneath the bedspread."
+]
+
+choice = random.choice(rooms)
+
+
+while Player != choice:
+
+    if choice == "Kitchen":
+        clue = random.choice(K_clues)
+        print(clue)
+        Player = input("What room? ")
+    if choice == "LivingRoom":
+        clue = random.choice(L_clues)
+        print(clue)
+        Player = input("What room? ")
+    if choice == "Bedroom":
+        clue = random.choice(B_clues)
+        print(clue)
+        Player = input("What room? ")
+
+
+
+print("You guessed it!")
+
+
